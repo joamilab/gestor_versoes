@@ -1,0 +1,32 @@
+<h2> Gerenciar Versões </h2>
+
+<h3> Criar versao </h3>
+<form action="/versionamento/versoes/criar/" method="post">
+{% csrf_token %}
+    <label for="numero">Número </label>
+    <input id="numero" type="text" name="numero_text" value="">
+    <label for="arquivo">Arquivo </label>
+    <input id="arquivo" type="text" name="arquivo_text" value="">
+    <input type="submit" value="Criar">
+</form>
+
+
+<h3> Editar versão </h3>
+<form action="/versionamento/versoes/editar/" method="post">
+{% csrf_token %}
+    <label for="codigo">Id </label>
+    <input id="codigo" type="text" name="id_text" value="">
+    <label for="numero">Número </label>
+    <input id="numero" type="text" name="numero_text" value="">
+    <label for="arquivo">Arquivo </label>
+    <input id="arquivo" type="text" name="arquivo_text" value="">
+    <input type="submit" value="Editar">
+</form>
+
+<h3> Excluir versão </h3>
+<form action="/versionamento/versoes/excluir/" method="post">
+{% csrf_token %}
+    <label for="codigo">Id </label>
+    <input id="codigo" type="text" name="id_text" value="">
+    <input type="submit" value="Excluir">
+</form>

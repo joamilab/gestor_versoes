@@ -1,0 +1,13 @@
+<h2> Publicações </h2>
+
+{% for pub in publicacoes %}
+    <p>Publicação: {{ pub.id }}</p>
+    <p>Data: {{ pub.data_pub }}</p>
+    <p>Id Empresa {{ pub.empresa.id }}</p>
+    <p>Empresa: {{ pub.empresa.nome }}</p>
+    <p>Id Versão: {{ pub.versao.id }}</p>
+    <p>Versão: {{ pub.versao.codigo }}</p>
+    <p>Número versão: {{ pub.versao.numero }}</p>
+    </br>
+{% endfor %}
+

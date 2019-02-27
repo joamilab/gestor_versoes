@@ -1,0 +1,30 @@
+
+{% load rest_framework %}
+<h2> Gerenciar Empresas </h2>
+
+<h3> Criar empresa </h3>
+<form action="/versionamento/empresas/criar/" method="post">
+{% csrf_token %}
+    <label for="nome">Nome </label>
+    <input id="nome" type="text" name="nome_text" value="">
+    <input type="submit" value="Criar">
+</form>
+
+
+<h3> Editar empresa </h3>
+<form action="/versionamento/empresas/editar/" method="post">
+{% csrf_token %}
+    <label for="codigo">Id </label>
+    <input id="codigo" type="text" name="id_text" value="">
+    <label for="nome">Nome </label>
+    <input id="nome" type="text" name="nome_text" value="">
+    <input type="submit" value="Editar">
+</form>
+
+<h3> Excluir empresa </h3>
+<form action="/versionamento/empresas/excluir/" method="post">
+{% csrf_token %}
+    <label for="codigo">Id </label>
+    <input id="codigo" type="text" name="id_text" value="">
+    <input type="submit" value="Excluir">
+</form>

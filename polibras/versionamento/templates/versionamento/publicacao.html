@@ -1,0 +1,62 @@
+<h2> Gerenciar Publicações </h2>
+
+<h3> Criar publicação </h3>
+<form action="/versionamento/publicacoes/criar/" method="post">
+{% csrf_token %}
+    <label for="data">Data (AAAA-MM-DD) </label>
+    <input id="data" type="text" name="data_text" value="">
+    <label for="empresa">Empresa Id </label>
+    <input id="empresa" type="text" name="empresa_text" value="">
+    <label for="versao">Versão Id </label>
+    <input id="versao" type="text" name="versao_text" value="">
+    <input type="submit" value="Criar">
+</form>
+
+
+<h3> Editar publicação </h3>
+<form action="/versionamento/publicacoes/editar/" method="post">
+{% csrf_token %}
+    <label for="codigo">Id </label>
+    <input id="codigo" type="text" name="id_text" value="">
+    <label for="data">Data </label>
+    <input id="data" type="text" name="data_text" value="">
+    <label for="empresa">Empresa Id </label>
+    <input id="empresa" type="text" name="empresa_text" value="">
+    <label for="versao">Versão Id </label>
+    <input id="versao" type="text" name="versao_text" value="">
+    <input type="submit" value="Editar">
+</form>
+
+<h3> Excluir publicação </h3>
+<form action="/versionamento/publicacoes/excluir/" method="post">
+{% csrf_token %}
+    <label for="codigo">Id </label>
+    <input id="codigo" type="text" name="id_text" value="">
+    <input type="submit" value="Excluir">
+</form>
+
+<h3> Listar publicações </h3>
+<form action="/versionamento/publicacoes/listar/" method="get">
+{% csrf_token %}
+    <input type="submit" value="Listar">
+</form>
+
+<h3> Filtrar publicações </h3>
+<form action="/versionamento/publicacoes/filtrar_por_data/" method="get">
+{% csrf_token %}
+    <label for="data">Data (AAAA-MM-DD)</label>
+    <input id="data" type="text" name="data_text" value="">
+    <input type="submit" value="Filtrar por Data">
+</form>
+<form action="/versionamento/publicacoes/filtrar_por_versao/" method="get">
+{% csrf_token %}
+    <label for="versao">Id Versao </label>
+    <input id="versao" type="text" name="versao_text" value="">
+    <input type="submit" value="Filtrar por Versao">
+</form>
+<form action="/versionamento/publicacoes/filtrar_por_empresa/" method="get">
+{% csrf_token %}
+    <label for="empresa">Id Empresa </label>
+    <input id="empresa" type="text" name="empresa_text" value="">
+    <input type="submit" value="Filtrar por Empresa">
+</form>

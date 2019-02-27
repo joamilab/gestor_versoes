@@ -1,0 +1,19 @@
+Pré-requisitos do sistema:
+   python >= 3
+   django >= 2
+   django rest_framework
+
+###########################PARA EXECUTAR O SISTEMA##################################
+
+Abra prompt de comando e use os seguintes comandos para executar o Servidor localmente:
+   cd <caminho-onde-pasta-foi-extraida>/teste_polibras/polibras/
+   python manage.py runserver
+
+Abra o navegador e digite o seguinte endereço para executar a aplicação Cliente:
+   localhost:8000/versionamento/
+
+Para executar os testes, abra outro prompt de comando e digite os seguintes comandos:
+   cd <caminho-onde-pasta-foi-extraida>/teste_polibras/polibras/
+   python manage.py test versionamento
+
+OBS: O banco de dados já possui alguns registros salvos.
