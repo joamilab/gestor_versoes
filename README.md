@@ -3,7 +3,7 @@ Gestor de versões de código para empresas desenvolvido com linguagem Python e 
 
 O servidor deve ser executado localmente, mas pode ser alterado para hospedagem em serviço de nuvem.
 
-O banco de dados sqlite3 possui alguns registros salvos, mas pode ser substituído por outro.
+Configurado para usar banco de dados sqlite3, mas pode ser alterado.
 
 
 ### Pré-requisitos para executar o sistema:
